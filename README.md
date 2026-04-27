@@ -1,12 +1,14 @@
 ## Evans Soh | CV & Portfolio
 My Name is Evans Soh
 Currently an Undegraduate at NUS as a Mechanical Engineering and Economics Double Degree Student
+
 This website serves as a central hub for Compilation of CVs and My projects
 
 (Updated CV to be added)
 
 ## Skills and Related
 Proficient in CAD Software, Mainly Solidworks, Fusion 360.
+
 Able to code in Python, and knows C and C++ enough to be able to read code.
 
 Can do simulation and CAD drafting relatively quickly, as an example, I have done bumpers for relevant robotics use and research before:
@@ -17,7 +19,9 @@ Can do simulation and CAD drafting relatively quickly, as an example, I have don
 This part will be sectioned as most recent first, then older posts later.
 
 Was part of NUS Calibur as main team from AY24/25 25/26, Mainly working on Standard Infantry Robots.
+
 Of course these robots were not made alone, but with a team of people I greatly appreciate working with :)
+
 
 Normal Infantry/Standard
 <img width="1282" height="912" alt="image" src="https://github.com/user-attachments/assets/2a343f7d-98bd-4ce7-ada1-4ec76506c7f0" />
