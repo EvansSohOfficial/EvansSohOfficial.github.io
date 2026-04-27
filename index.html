@@ -127,14 +127,25 @@
     }
     .project-block p { margin-bottom: 0.3rem; }
 
-    .robot-list {
-      list-style: none;
-      margin: 0.6rem 0 0 var(--indent);
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.85rem;
+    .robot-entry {
+      margin-top: 1.2rem;
     }
-    .robot-list li::before { content: "— "; opacity: 0.5; }
-    .robot-list li { margin-bottom: 0.2rem; }
+    .robot-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+    .robot-entry img {
+      width: 100%;
+      max-width: 520px;
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+      display: block;
+    }
 
     /* ── Footer ── */
     footer {
@@ -195,11 +206,18 @@
       <div class="label">AY24/25 — AY25/26</div>
       <p>Was part of <strong>NUS Calibur</strong> as main team from AY24/25–25/26, mainly working on Standard Infantry Robots.</p>
       <p>Of course these robots were not made alone, but with a team of people I greatly appreciate working with :)</p>
-      <ul class="robot-list">
-        <li>Normal Infantry / Standard</li>
-        <li>Sentry / Standard</li>
-        <li>Balancing Infantry</li>
-      </ul>
+      <div class="robot-entry">
+        <div class="robot-label">Normal Infantry / Standard</div>
+        <img src="Standard.png" alt="Standard Infantry Robot" />
+      </div>
+      <div class="robot-entry">
+        <div class="robot-label">Sentry / Standard</div>
+        <img src="InfantrySentry.png" alt="Sentry Robot" />
+      </div>
+      <div class="robot-entry">
+        <div class="robot-label">Balancing Infantry</div>
+        <img src="balancing.png" alt="Balancing Infantry Robot" />
+      </div>
     </div>
   </section>
 
