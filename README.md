@@ -1,4 +1,4 @@
-#CV & Portfolio
+## Evans Soh | CV & Portfolio
 My Name is Evans Soh
 Currently an Undegraduate at NUS as a Mechanical Engineering and Economics Double Degree Student
 This website serves as a central hub for Compilation of CVs and My projects
