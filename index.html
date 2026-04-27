@@ -1,91 +1,221 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional CV and Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        header {
-            background: linear-gradient(to right, #4facfe, #00f2fe);
-            color: white;
-            padding: 20px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav {
-            margin: 20px;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
-        section {
-            padding: 20px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #f1f1f1;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evans Soh | CV & Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f9f9f7;
+      --text: #1a1a1a;
+      --muted: #555;
+      --accent: #1a1a1a;
+      --rule: #d0d0cc;
+      --indent: 2rem;
+    }
+
+    body {
+      font-family: 'IBM Plex Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.7;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem 6rem;
+    }
+
+    /* ── Header ── */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1.8rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--text);
+    }
+    header .chain { font-size: 1.1rem; opacity: 0.5; }
+    header h1 {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 1.45rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    /* ── Body paragraphs ── */
+    .intro p {
+      margin-bottom: 0.55rem;
+      color: var(--text);
+    }
+    .intro p.muted { color: var(--muted); font-style: italic; }
+
+    /* ── Sections ── */
+    section { margin-top: 2.4rem; }
+
+    section h2 {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    section p { margin-bottom: 0.55rem; }
+
+    /* ── Blockquote-style callout ── */
+    .callout {
+      margin: 0.9rem 0 0.9rem var(--indent);
+      padding-left: 1rem;
+      border-left: 3px solid var(--text);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    /* ── CAD images ── */
+    .cad-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .cad-grid img {
+      width: 100%;
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+      display: block;
+    }
+    .cad-grid .placeholder {
+      background: #e8e8e4;
+      aspect-ratio: 16/9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+      border: 1px dashed var(--rule);
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    /* ── Projects / Timeline ── */
+    .project-note {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+      font-style: italic;
+    }
+
+    .project-block { margin-bottom: 1.6rem; }
+    .project-block .label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.82rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+      color: var(--muted);
+    }
+    .project-block p { margin-bottom: 0.3rem; }
+
+    .robot-list {
+      list-style: none;
+      margin: 0.6rem 0 0 var(--indent);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.85rem;
+    }
+    .robot-list li::before { content: "— "; opacity: 0.5; }
+    .robot-list li { margin-bottom: 0.2rem; }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: 3.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--rule);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+    }
+
+    @media (max-width: 540px) {
+      .cad-grid { grid-template-columns: 1fr; }
+      body { padding: 2rem 1.2rem 4rem; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Brief introduction about yourself.</p>
-    </section>
-    <section id="experience">
-        <h2>Experience</h2>
-        <p>Details of your work experience.</p>
-    </section>
-    <section id="education">
-        <h2>Education</h2>
-        <p>Details of your educational background.</p>
-    </section>
-    <section id="skills">
-        <h2>Skills</h2>
-        <p>List of your skills.</p>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>Details of your projects.</p>
-    </section>
-    <section id="certifications">
-        <h2>Certifications</h2>
-        <p>Details of your certifications.</p>
-    </section>
-    <section id="contact">
-        <h2>Contact Information</h2>
-        <p>Your contact details.</p>
-    </section>
-    <footer>
-        <p>&copy; 2026 Your Name. All rights reserved.</p>
-    </footer>
+
+  <header>
+    <span class="chain">🔗</span>
+    <h1>Evans Soh | CV &amp; Portfolio</h1>
+  </header>
+
+  <div class="intro">
+    <p>My Name is Evans Soh — currently an undergraduate at NUS as a Mechanical Engineering and Economics Double Degree Student.</p>
+    <p>This website serves as a central hub for Compilation of CVs and My projects.</p>
+    <p class="muted">(Updated CV to be added)</p>
+  </div>
+
+  <!-- Skills -->
+  <section>
+    <h2>Skills and Related</h2>
+
+    <p>Proficient in CAD Software, mainly Solidworks, Fusion 360.</p>
+    <p>Able to code in Python, and knows C and C++ enough to be able to read code.</p>
+    <p>Can do simulation and CAD drafting relatively quickly. As an example, I have done bumpers for relevant robotics use and research before:</p>
+
+    <div class="callout">
+      Added bumpers, did Solidworks static analysis for 300N force from the side,<br>
+      acceptable displacement. Will do for top and bottom as well.
+    </div>
+
+    <div class="cad-grid">
+      <div class="placeholder">[ Solidworks Static Displacement<br>Side load — left view ]</div>
+      <div class="placeholder">[ Solidworks Static Displacement<br>Side load — right view ]</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section>
+    <h2>Past Projects / Club / Interest Groups</h2>
+
+    <p class="project-note">Most recent first, older posts later.</p>
+
+    <div class="project-block">
+      <div class="label">AY24/25 — AY25/26</div>
+      <p>Was part of <strong>NUS Calibur</strong> as main team from AY24/25–25/26, mainly working on Standard Infantry Robots.</p>
+      <p>Of course these robots were not made alone, but with a team of people I greatly appreciate working with :)</p>
+      <ul class="robot-list">
+        <li>Normal Infantry / Standard</li>
+        <li>Sentry / Standard</li>
+        <li>Balancing Infantry</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section>
+    <h2>Contact Information</h2>
+    <p>Not added here as I do not want to get doxxed.</p>
+  </section>
+
+  <footer>
+    <span>Evans Soh</span>
+    <span>Last updated: April 2026</span>
+  </footer>
+
 </body>
 </html>
