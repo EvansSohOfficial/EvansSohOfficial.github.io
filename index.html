@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,49 +9,83 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #6a11cb, #2575fc);
-            color: white;
+            box-sizing: border-box;
         }
         header {
-            text-align: center;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
             padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            margin: 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
         }
         section {
-            margin: 20px;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #f1f1f1;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Your Name</h1>
-        <p>Your Tagline</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <section id="about">
-        <h2>About</h2>
-        <p>Brief description about yourself.</p>
+        <h2>About Me</h2>
+        <p>Brief introduction about yourself.</p>
     </section>
     <section id="experience">
         <h2>Experience</h2>
-        <p>List your professional experiences here.</p>
+        <p>Details of your work experience.</p>
     </section>
     <section id="education">
         <h2>Education</h2>
-        <p>Details of your education.</p>
+        <p>Details of your educational background.</p>
     </section>
     <section id="skills">
         <h2>Skills</h2>
-        <p>List your skills here.</p>
+        <p>List of your skills.</p>
     </section>
     <section id="projects">
         <h2>Projects</h2>
-        <p>Highlight your projects here.</p>
+        <p>Details of your projects.</p>
     </section>
     <section id="certifications">
         <h2>Certifications</h2>
-        <p>List your certifications here.</p>
+        <p>Details of your certifications.</p>
     </section>
+    <section id="contact">
+        <h2>Contact Information</h2>
+        <p>Your contact details.</p>
+    </section>
+    <footer>
+        <p>&copy; 2026 Your Name. All rights reserved.</p>
+    </footer>
 </body>
 </html>
