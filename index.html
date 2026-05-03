@@ -147,6 +147,26 @@
       display: block;
     }
 
+    /* ── CV link ── */
+    .cv-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid var(--text);
+      padding: 0.35rem 0.75rem;
+      border-radius: 2px;
+      margin-top: 0.4rem;
+      transition: background 0.15s, color 0.15s;
+    }
+    .cv-link:hover {
+      background: var(--text);
+      color: var(--bg);
+    }
+
     /* ── Footer ── */
     footer {
       margin-top: 3.5rem;
@@ -177,7 +197,10 @@
   <div class="intro">
     <p>Undergraduate at NUS as a Mechanical Engineering and Economics Double Degree Student.</p>
     <p>This website serves as a central hub for Compilation of CVs and My projects.</p>
-    <p class="muted">(Updated CV to be added)</p>
+    <a class="cv-link" href="EvansSoh_CV.pdf" target="_blank">↓ EvansSoh_CV.pdf</a>
+    <div style="margin-top:1rem;">
+      <img src="CVpng.png" alt="Evans Soh CV preview" style="width:100%;max-width:600px;border:1px solid var(--rule);border-radius:2px;display:block;" />
+    </div>
   </div>
 
   <!-- Skills -->
